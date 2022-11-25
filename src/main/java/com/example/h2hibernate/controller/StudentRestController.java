@@ -1,6 +1,7 @@
 package com.example.h2hibernate.controller;
 
 import com.example.h2hibernate.model.Student;
+import com.example.h2hibernate.model.Subject;
 import com.example.h2hibernate.service.StudentServiceImpl;
 import com.example.h2hibernate.service.SubjectServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,39 +13,48 @@ import java.util.List;
 @RequestMapping("/api")
 public class StudentRestController {
 
-        @Autowired
-        private SubjectServiceImpl subjectService;
+    @Autowired
+    private SubjectServiceImpl subjectService;
 
-        @Autowired
-        private StudentServiceImpl userService;
+    @Autowired
+    private StudentServiceImpl userService;
 
-        @GetMapping("/centro/alumnos")
-        public List<Student> findAll() {
+    @GetMapping("/centro/alumnos")
+    public List<Student> findAll() {
 
-            return userService.findAll();
-        }
+        return userService.findAll();
+    }
 
-        @GetMapping("/centro/alumnos/{studentId}")
-        public Student getUser(@PathVariable int studentId) {
-            return userService.findById(studentId);
-        }
+    @GetMapping("/centro/alumnos/{studentId}")
+    public Student getUser(@PathVariable int studentId) {
+        return userService.findById(studentId);
+    }
 
-        @PostMapping("/centro/alumnos/new")
-        public Student addUser(@RequestBody Student student) {
-            userService.save(student);
-            return student;
-        }
+    @PostMapping("/centro/alumnos/new")
+    public Student addUser(@RequestBody Student student) {
+        userService.save(student);
+        return student;
+    }
 
-        @PutMapping("/centro/alumnos/update")
-        public Student updateUser(@RequestBody Student student) {
-            userService.update(student);
-            return student;
-        }
+    @PutMapping("/centro/alumnos/update")
+    public Student updateUser(@RequestBody Student student) {
+        userService.update(student);
+        return student;
+    }
 
-        @DeleteMapping("/centro/alumnos/{studentId}")
-        public String deleteUser(@PathVariable int studentId) {
-            Student student = userService.findById(studentId);
-            userService.deleteById(studentId);
-            return "Deleted user id - " + student.getId();
-        }
+    @DeleteMapping("/centro/alumnos/{studentId}")
+    public String deleteUser(@PathVariable int studentId) {
+        Student student = userService.findById(studentId);
+        userService.deleteById(studentId);
+        return "Deleted user id - " + student.getId();
+    }
+
+    @PutMapping("/centro/matricular/{idStudent}/{idSubject}")
+    public String matriculateUser(@PathVariable int idStudent, @PathVariable int idSubject) {
+        Subject subject = subjectService.findById(idSubject);
+        Student student = userService.findById(idStudent);
+        student.getSubjects().add(subject);
+        userService.update(student);
+        return "Added subject " + idSubject + " to student - " + idStudent;
+    }
 }
