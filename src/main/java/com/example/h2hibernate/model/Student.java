@@ -18,11 +18,23 @@ public class Student {
     @Column
     private int age;
     @ManyToMany
-    @JoinTable(name = "enrollments",
+    @JoinTable(name = "Enrollments",
             joinColumns = @JoinColumn(name = "StudentID"),
             inverseJoinColumns = @JoinColumn(name = "SubjectID")
     )
     private List<Subject> subjects = new ArrayList<>();
+
+    public Student() {
+
+    }
+
+    public Student(int id, String name, String DNI, int age, List<Subject> subjects) {
+        this.id = id;
+        this.name = name;
+        this.DNI = DNI;
+        this.age = age;
+        this.subjects = subjects;
+    }
 
     public int getId() {
         return id;

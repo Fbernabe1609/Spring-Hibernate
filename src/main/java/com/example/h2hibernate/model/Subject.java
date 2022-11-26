@@ -18,6 +18,17 @@ public class Subject {
     @ManyToMany(mappedBy = "subjects")
     private List<Student> students = new ArrayList<>();
 
+    public Subject() {
+
+    }
+
+    public Subject(int id, String name, int totalStudents, List<Student> students) {
+        this.id = id;
+        this.name = name;
+        this.totalStudents = totalStudents;
+        this.students = students;
+    }
+
     public int getId() {
         return id;
     }

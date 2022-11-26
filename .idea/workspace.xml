@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf5228a7-9c0d-4d33-8e01-25aa7c195e61" name="Changes" comment="Avance">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/test.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/h2hibernate/controller/StudentRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/h2hibernate/controller/StudentRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/h2hibernate/controller/StudentRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/h2hibernate/controller/StudentRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/h2hibernate/model/Subject.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/h2hibernate/model/Subject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/h2hibernate/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/h2hibernate/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/h2hibernate/model/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/h2hibernate/model/Subject.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,29 +51,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Cliente/Downloads/Hibernate-H2-Spring-Maven-master",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "e0cbc24b123dd4ce09f03bf24010db4d"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Cliente/Downloads/Hibernate-H2-Spring-Maven-master&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;e0cbc24b123dd4ce09f03bf24010db4d&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "h2"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;h2&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.example.h2hibernate.dao" />
@@ -107,7 +105,9 @@
       <workItem from="1669137305030" duration="1453000" />
       <workItem from="1669315632394" duration="1539000" />
       <workItem from="1669325799374" duration="5666000" />
-      <workItem from="1669333123711" duration="3388000" />
+      <workItem from="1669333123711" duration="3404000" />
+      <workItem from="1669381597739" duration="1829000" />
+      <workItem from="1669498885074" duration="171000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <created>1669320941148</created>
@@ -123,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669334733010</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Avance">
+      <created>1669336526121</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669336526121</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
