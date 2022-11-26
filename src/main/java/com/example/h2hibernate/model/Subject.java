@@ -1,5 +1,7 @@
 package com.example.h2hibernate.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +17,7 @@ public class Subject {
     private String name;
     @Column
     private int totalStudents;
+    @JsonIgnore
     @ManyToMany(mappedBy = "subjects")
     private List<Student> students = new ArrayList<>();
 
