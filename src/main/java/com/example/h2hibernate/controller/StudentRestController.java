@@ -53,6 +53,8 @@ public class StudentRestController {
     public String matriculateUser(@PathVariable int idStudent, @PathVariable int idSubject) {
         Subject subject = subjectService.findById(idSubject);
         Student student = userService.findById(idStudent);
+        subject.getStudents().add(student);
+        subject.setTotalStudents(subject.getTotalStudents() + 1);
         student.getSubjects().add(subject);
         userService.update(student);
         return "Added subject " + idSubject + " to student - " + idStudent;
