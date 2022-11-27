@@ -58,7 +58,7 @@ public class StudentRestController {
         student.getSubjects().add(subject);
         userService.update(student);
         subjectService.update(subject);
-        return "Added subject " + idSubject + " to student = " + idStudent;
+        return "Añadida asignatura " + idSubject + " al estudiante " + idStudent;
     }
     @DeleteMapping("/centro/matricular/{idStudent}/{idSubject}")
     public String deregisterUser(@PathVariable int idStudent, @PathVariable int idSubject) {
@@ -69,6 +69,6 @@ public class StudentRestController {
         student.getSubjects().remove(subject);
         userService.update(student);
         subjectService.update(subject);
-        return "Removed subject " + idSubject + " to student = " + idStudent;
+        return "Asignatura removida " + idSubject + " del estudiante " + idStudent;
     }
 }

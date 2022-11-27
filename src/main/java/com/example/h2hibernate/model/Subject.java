@@ -1,6 +1,6 @@
 package com.example.h2hibernate.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -17,7 +17,8 @@ public class Subject {
     private String name;
     @Column
     private int totalStudents;
-    @JsonIgnore
+
+    @JsonIgnoreProperties("subjects")
     @ManyToMany(mappedBy = "subjects")
     private List<Student> students = new ArrayList<>();
 

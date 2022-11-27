@@ -1,5 +1,7 @@
 package com.example.h2hibernate.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,10 +15,11 @@ public class Student {
     private int id;
     @Column
     private String name;
-    @Column
+    @Column(unique = true)
     private String DNI;
     @Column
     private int age;
+    @JsonIgnoreProperties("students")
     @ManyToMany
     @JoinTable(name = "Enrollments",
             joinColumns = @JoinColumn(name = "StudentID"),
