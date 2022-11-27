@@ -46,10 +46,10 @@ public class StudentRestController {
     public String deleteUser(@PathVariable int studentId) {
         Student student = userService.findById(studentId);
         userService.deleteById(studentId);
-        return "Deleted user id = " + student.getId();
+        return "El usuario " + student.getId() + " ha sido borrado.";
     }
 
-    @PutMapping("/centro/matricular/{idStudent}/{idSubject}")
+    @PostMapping("/centro/matricular/{idStudent}/{idSubject}")
     public String matriculateUser(@PathVariable int idStudent, @PathVariable int idSubject) {
         String message = "";
         Subject subject = subjectService.findById(idSubject);
@@ -67,6 +67,7 @@ public class StudentRestController {
 
         return message;
     }
+
     @DeleteMapping("/centro/matricular/{idStudent}/{idSubject}")
     public String deregisterUser(@PathVariable int idStudent, @PathVariable int idSubject) {
         String message = "";
@@ -78,7 +79,7 @@ public class StudentRestController {
             student.getSubjects().remove(subject);
             userService.update(student);
             subjectService.update(subject);
-            message = "Asignatura removida " + idSubject + " del estudiante " + idStudent;
+            message = "Asignatura " + idSubject + " removida del estudiante " + idStudent;
         } else {
             message = "El alumno no está matriculado en esa asignatura o esa asignatura no existe.";
         }
