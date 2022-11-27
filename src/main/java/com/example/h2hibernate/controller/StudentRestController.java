@@ -51,24 +51,38 @@ public class StudentRestController {
 
     @PutMapping("/centro/matricular/{idStudent}/{idSubject}")
     public String matriculateUser(@PathVariable int idStudent, @PathVariable int idSubject) {
+        String message = "";
         Subject subject = subjectService.findById(idSubject);
         Student student = userService.findById(idStudent);
-        subject.getStudents().add(student);
-        subject.setTotalStudents(subject.getTotalStudents() + 1);
-        student.getSubjects().add(subject);
-        userService.update(student);
-        subjectService.update(subject);
-        return "Añadida asignatura " + idSubject + " al estudiante " + idStudent;
+        if (student.getSubjects().indexOf(subject) == -1) {
+            subject.getStudents().add(student);
+            subject.setTotalStudents(subject.getTotalStudents() + 1);
+            student.getSubjects().add(subject);
+            userService.update(student);
+            subjectService.update(subject);
+            message = "Añadida asignatura " + idSubject + " al estudiante " + idStudent;
+        } else {
+            message = "El alumno ya está matriculado en esa asignatura o esa asignatura no existe.";
+        }
+
+        return message;
     }
     @DeleteMapping("/centro/matricular/{idStudent}/{idSubject}")
     public String deregisterUser(@PathVariable int idStudent, @PathVariable int idSubject) {
+        String message = "";
         Subject subject = subjectService.findById(idSubject);
         Student student = userService.findById(idStudent);
-        subject.getStudents().remove(student);
-        subject.setTotalStudents(subject.getTotalStudents() - 1);
-        student.getSubjects().remove(subject);
-        userService.update(student);
-        subjectService.update(subject);
-        return "Asignatura removida " + idSubject + " del estudiante " + idStudent;
+        if (student.getSubjects().indexOf(subject) != -1) {
+            subject.getStudents().remove(student);
+            subject.setTotalStudents(subject.getTotalStudents() - 1);
+            student.getSubjects().remove(subject);
+            userService.update(student);
+            subjectService.update(subject);
+            message = "Asignatura removida " + idSubject + " del estudiante " + idStudent;
+        } else {
+            message = "El alumno no está matriculado en esa asignatura o esa asignatura no existe.";
+        }
+
+        return message;
     }
 }

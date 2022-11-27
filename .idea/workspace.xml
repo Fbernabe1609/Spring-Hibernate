@@ -5,19 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf5228a7-9c0d-4d33-8e01-25aa7c195e61" name="Changes" comment="Avance">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/h2hibernate/controller/StudentRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/h2hibernate/controller/StudentRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/h2hibernate/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/h2hibernate/model/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/h2hibernate/model/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/h2hibernate/model/Subject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/test.sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/h2hibernate/controller/StudentRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/h2hibernate/controller/StudentRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/h2hibernate/controller/SubjectRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/h2hibernate/controller/SubjectRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/h2hibernate/model/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/h2hibernate/model/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/h2hibernate/model/Subject.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/h2hibernate/model/Subject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/h2hibernate/service/StudentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/h2hibernate/service/StudentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/test.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +39,7 @@
       <map>
         <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
   </component>
@@ -126,7 +117,7 @@
       <workItem from="1669333123711" duration="3404000" />
       <workItem from="1669381597739" duration="1829000" />
       <workItem from="1669498885074" duration="2492000" />
-      <workItem from="1669564907118" duration="9899000" />
+      <workItem from="1669564907118" duration="11032000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <created>1669320941148</created>
@@ -198,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669508267189</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Avance">
+      <created>1669585646723</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1669585646724</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
