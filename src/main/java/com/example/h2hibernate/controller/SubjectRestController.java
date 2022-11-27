@@ -19,14 +19,12 @@ public class SubjectRestController {
 
     @GetMapping("/centro/asignaturas")
     public List<Subject> findAll() {
-        List<Subject> mySubjectList = subjectService.findAll();
-        return mySubjectList;
+        return subjectService.findAll();
     }
 
     @GetMapping("/centro/asignaturas/{id}")
     public Subject getSubject(@PathVariable int id) {
-        Subject subject = subjectService.findById(id);
-        return subject;
+        return subjectService.findById(id);
     }
 
     @PostMapping("/centro/asignaturas/new")

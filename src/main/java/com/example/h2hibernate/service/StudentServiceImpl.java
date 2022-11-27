@@ -15,14 +15,12 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public List<Student> findAll() {
-        List<Student> listUsers = studentDAO.findAll();
-        return listUsers;
+        return studentDAO.findAll();
     }
 
     @Override
     public Student findById(int id) {
-        Student user = studentDAO.findById(id);
-        return user;
+        return studentDAO.findById(id);
     }
 
     @Override

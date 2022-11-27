@@ -57,6 +57,7 @@ public class StudentRestController {
         subject.setTotalStudents(subject.getTotalStudents() + 1);
         student.getSubjects().add(subject);
         userService.update(student);
+        subjectService.update(subject);
         return "Added subject " + idSubject + " to student - " + idStudent;
     }
     @DeleteMapping("/centro/matricular/{idStudent}/{idSubject}")
@@ -64,9 +65,10 @@ public class StudentRestController {
         Subject subject = subjectService.findById(idSubject);
         Student student = userService.findById(idStudent);
         subject.getStudents().remove(student);
-        subject.setTotalStudents(subject.getTotalStudents() + -1);
+        subject.setTotalStudents(subject.getTotalStudents() - 1);
         student.getSubjects().remove(subject);
         userService.update(student);
-        return "Added subject " + idSubject + " to student - " + idStudent;
+        subjectService.update(subject);
+        return "Removed subject " + idSubject + " to student - " + idStudent;
     }
 }
