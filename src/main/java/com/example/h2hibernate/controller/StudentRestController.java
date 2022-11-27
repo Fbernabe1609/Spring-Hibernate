@@ -59,4 +59,14 @@ public class StudentRestController {
         userService.update(student);
         return "Added subject " + idSubject + " to student - " + idStudent;
     }
+    @DeleteMapping("/centro/matricular/{idStudent}/{idSubject}")
+    public String deregisterUser(@PathVariable int idStudent, @PathVariable int idSubject) {
+        Subject subject = subjectService.findById(idSubject);
+        Student student = userService.findById(idStudent);
+        subject.getStudents().remove(student);
+        subject.setTotalStudents(subject.getTotalStudents() + -1);
+        student.getSubjects().remove(subject);
+        userService.update(student);
+        return "Added subject " + idSubject + " to student - " + idStudent;
+    }
 }
