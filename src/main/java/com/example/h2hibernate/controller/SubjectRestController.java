@@ -43,6 +43,6 @@ public class SubjectRestController {
     public String deleteSubject(@PathVariable int id) {
         Subject subject = subjectService.findById(id);
         subjectService.deleteById(id);
-        return "Deleted subject id - " + subject.getId();
+        return "Deleted subject id = " + subject.getId();
     }
 }

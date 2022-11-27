@@ -46,7 +46,7 @@ public class StudentRestController {
     public String deleteUser(@PathVariable int studentId) {
         Student student = userService.findById(studentId);
         userService.deleteById(studentId);
-        return "Deleted user id - " + student.getId();
+        return "Deleted user id = " + student.getId();
     }
 
     @PutMapping("/centro/matricular/{idStudent}/{idSubject}")
@@ -58,7 +58,7 @@ public class StudentRestController {
         student.getSubjects().add(subject);
         userService.update(student);
         subjectService.update(subject);
-        return "Added subject " + idSubject + " to student - " + idStudent;
+        return "Added subject " + idSubject + " to student = " + idStudent;
     }
     @DeleteMapping("/centro/matricular/{idStudent}/{idSubject}")
     public String deregisterUser(@PathVariable int idStudent, @PathVariable int idSubject) {
@@ -69,6 +69,6 @@ public class StudentRestController {
         student.getSubjects().remove(subject);
         userService.update(student);
         subjectService.update(subject);
-        return "Removed subject " + idSubject + " to student - " + idStudent;
+        return "Removed subject " + idSubject + " to student = " + idStudent;
     }
 }
